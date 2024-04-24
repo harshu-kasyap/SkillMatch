@@ -31,21 +31,22 @@ def input_pdf_setup(uploaded_file):
 
 
 # app setup
-st.set_page_config(page_title="Resume Advisor",
+st.set_page_config(page_title="SkillMatch",
 page_icon=":clipboard:", )
 
 # Navigation Bar with Tabs
-st.sidebar.image("images/resume.ico, use_column_width=True)
+# st.sidebar.image("C:\\Users\\harsh\\Downloads\\resume.ico", use_column_width=True)
 navigation = st.sidebar.title("Select Role")
-st.image("images/skillmatch-high-resolution-logo-transparent (1).png" , use_column_width=True)
+# st.image(""C:\Users\harsh\Downloads\skillmatch-high-resolution-logo-transparent (1).png" , use_column_width=True)
 # st.header("SKILLMATCH📋")
 st.markdown("Where Talent Meets Opportunity!")
 
 
- 
+selected_tab = st.sidebar.selectbox("", ["HR", "Applicant"])
+
      #-------------------------------------------------------------------#
-     
-     
+
+
 
 # Setup  for HR part
 
@@ -66,8 +67,8 @@ if selected_tab == "HR":
             "submit1": submit1,
             "submit2": submit2
         }
-        
-        
+
+
 
     def show_response_hr(buttons, input_prompts):
         if buttons["submit1"] and uploaded_file is not None:
@@ -109,9 +110,9 @@ if selected_tab == "HR":
             the job description. also write a small review """
      }
     show_response_hr(buttons_hr, input_prompts)
-                 
-                 
-                 
+
+
+
              #------------------------------------------------------------#
 
 
@@ -147,7 +148,7 @@ if selected_tab == "Applicant":
                 st.subheader("The Response is")
                 st.write(response)
 
-        
+
         else:
             if uploaded_file is None:
                 st.write("Please upload the resume")
@@ -157,17 +158,19 @@ if selected_tab == "Applicant":
         "APP_IMP": """
             You are an experienced technical human resource manager your task is to review the provided resume(PDF) againts the job desciption and  Tell what points to be improved by compairing the resume with job description only, what skills are missing, what should be the improvement. 
             First mention what are the missing skills and skills need to be added (in  rows and cloumns format) , there should be 2 columns 1st coloumn will be Missing Skills and 2nd will be Skill to be added(remember give this rows and columns) . then atlast give some recommendations """
-        
+
     }
     show_response_app(buttons_app, input_prompts )
         #-----------------------------------------------------#
-        
-        
+
+
 footer_col1, footer_col2, footer_col3 = st.columns([1, 6, 1])
 with footer_col2:
     st.write('Gemini AI powered Resume Advisor model  build by Harsh')
-    # Display link for users to connect with you using emojis
-    st.write("Connect with me 👉👉 [here](https://kumarharsh.vercel.app/)")
+
+# Display link for users to connect with you using emojis
+    st.write("Connect with me 👉 [here](https://kumarharsh.vercel.app/)")
+
 
 
 
