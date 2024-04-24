@@ -31,16 +31,21 @@ def input_pdf_setup(uploaded_file):
 
 
 # app setup
-st.set_page_config(page_title="SkillMatch",
+st.set_page_config(page_title="Resume Advisor",
 page_icon=":clipboard:", )
 
 # Navigation Bar with Tabs
-st.sidebar.image("images//resume.ico", use_column_width=True)
+st.sidebar.image("images/resume.ico", use_column_width=True)
 navigation = st.sidebar.title("Select Role")
-st.image("simages//skillmatch-high-resolution-logo-transparent (1).png" , use_column_width=True)
-st.header("SKILLMATCH📋")
+st.image("skillmatch-high-resolution-logo-transparent (1).png" , use_column_width=True)
+# st.header("SKILLMATCH📋")
 st.markdown("Where Talent Meets Opportunity!")
 
+
+ 
+     #-------------------------------------------------------------------#
+     
+     
 
 selected_tab = st.sidebar.selectbox("", ["HR", "Applicant"])
 
@@ -170,7 +175,3 @@ with footer_col2:
 
 # Display link for users to connect with you using emojis
     st.write("Connect with me 👉 [here](https://kumarharsh.vercel.app/)")
-
-
-
-
