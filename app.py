@@ -35,9 +35,9 @@ st.set_page_config(page_title="SkillMatch",
 page_icon=":clipboard:", )
 
 # Navigation Bar with Tabs
-# st.sidebar.image("C:\\Users\\harsh\\Downloads\\resume.ico", use_column_width=True)
+# st.sidebar.image("images/skillmatch-high-resolution-logo-transparent (1).png", use_column_width=True)
 navigation = st.sidebar.title("Select Role")
-# st.image(""C:\Users\harsh\Downloads\skillmatch-high-resolution-logo-transparent (1).png" , use_column_width=True)
+# st.image("images/skillmatch-high-resolution-logo-transparent (1).png" , use_column_width=True)
 # st.header("SKILLMATCH📋")
 st.markdown("Where Talent Meets Opportunity!")
 
